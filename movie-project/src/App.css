@@ -1,0 +1,10 @@
+
+.background {
+width: 100%;
+height: 100%;
+/* делаем позицию абсолют */
+position: absolute;
+background: url(./image/wallpaper.png) no-repeat center;
+/* чтобы картинка покрывала весь бекграунд */
+background-size: cover;
+}
