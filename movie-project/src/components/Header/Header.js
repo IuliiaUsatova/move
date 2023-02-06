@@ -5,6 +5,8 @@ import ProfileIcon from '../../image/profile.svg'
 import { useEffect, useState } from "react";
 import { getDataFromBackend } from "../../utils/config";
 
+
+
 function Header() {
     //создаем контейнер и присваиваем его юзстейту c аргументами текст, а вторая функция которая этот текс меняет
 const [searchText, setSearchText] = useState();
