@@ -17,6 +17,7 @@ const Slider = () => {
   }, []);
 
   return (
+    <div className="slider_block">
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
@@ -37,6 +38,7 @@ const Slider = () => {
         );
       })}
     </Swiper>
+    </div>
   );
 };
 export default Slider;

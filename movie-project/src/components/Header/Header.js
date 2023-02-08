@@ -4,6 +4,7 @@ import BasketIcon from '../../image/basket.svg'
 import ProfileIcon from '../../image/profile.svg'
 import { useEffect, useState } from "react";
 import { getDataFromBackend } from "../../utils/config";
+import { useNavigate } from "react-router";
 
 
 
@@ -14,6 +15,8 @@ const [searchText, setSearchText] = useState();
 const [data, setData] = useState([]);
 //создаем контейнер для выбранного фильма чтобы его сохранить
 const [selectedFilm, setSelectedFilm] = useState();
+
+const router = useNavigate();//хук отвечает за перенаправление
 //добавляем useEffect для того, чтобы он выполнил логику если меняется searchText в input
 useEffect(() => {
 if (searchText){
@@ -54,7 +57,7 @@ if (res.Response === 'True'){
                     </div>
                 </div>
                 <div className='header__basketProfile__block'>
-                   <div className="header__icons">
+                   <div className="header__icons" onClick={() => router('/basket')}>
                     <img src={BasketIcon} alt="" className='header__icons header__basket__logo'/>
                     </div>
                     <div className="header__icons">

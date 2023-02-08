@@ -1,7 +1,8 @@
 import { Route, Routes, Navigate } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import App from "../App";
+import Main from '../pages/main/Main';
 import Categories from '../components/categories/Categories';
+import Basket from '../pages/Basket/Basket';
 
 //Router -> react-router
 //Browser -> react-router-dom
@@ -16,9 +17,10 @@ const Router = () => {
     return <BrowserRouter>
     <Routes>
         <Route path={'/'} element={<Navigate to={'/movie'}/>} />
-    <Route path={'/movie'} element={<App />}/>
+    <Route path={'/movie'} element={<Main />}/>
     <Route path={'/categories'} element={<Categories />} />
     <Route path={'*'} element={<div>Error! Page not found. 404</div>} />
+    <Route path={'/basket'} element={<Basket />} />
     </Routes>
     </BrowserRouter>
 }
