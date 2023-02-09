@@ -1,20 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState } from "react";
-import { getDataFromBackend } from "../../utils/config";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "./Slider.css";
+import { useContext } from "react";
+import { ModalContext } from "../../pages/providers/ModalProvider";
 
 const Slider = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    getDataFromBackend().then((res) => {
-      setItems(res);
-    });
-  }, []);
+  const items = useContext(ModalContext);
+//создаем контейнер и в него помещаем функцию из Провайдера
 
   return (
     <div className="slider_block">

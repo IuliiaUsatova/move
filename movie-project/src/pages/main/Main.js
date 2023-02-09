@@ -3,6 +3,7 @@ import './Main.css'
 import Slider from "../../components/slider/Slider";
 import MovieList from "../../components/items/MovieList";
 import Categories from "../../components/categories/Categories";
+import Basket from "../Basket/Basket";
 
 function Main (props) {
     return (

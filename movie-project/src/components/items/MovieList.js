@@ -1,19 +1,11 @@
-import { useEffect } from "react";
-import { getDataFromBackend } from "../../utils/config";
-import { useState } from "react";
 import "./MovieList.css";
 import StarIcon from "../../image/Star.svg";
 import UnfilledStars from "../../image/Star 5.svg";
-
+import { ModalContext } from "../../pages/providers/ModalProvider";
+import { useContext } from "react";
 
 const MovieList = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    getDataFromBackend().then((res) => {
-      setMovies(res);
-    });
-  }, []);
+  const movies = useContext(ModalContext)
 
   return (
     <div className="movie__list">

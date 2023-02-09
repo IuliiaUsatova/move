@@ -1,0 +1,24 @@
+.basket{
+    display: flex;
+    justify-content: center;
+}
+
+.basket__block {
+  max-width: 1535px;
+  min-height: 830px;
+  padding: 45px 68px 43px 31px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 60px;
+}
+
+.basket__block__item {
+  width: 1436px;
+  height: 201px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.movie__in__basket{
+
+}
